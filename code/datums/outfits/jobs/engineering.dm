@@ -21,7 +21,7 @@
 
 /decl/hierarchy/outfit/job/engineering/engineer
 	name = OUTFIT_JOB_NAME("Engineer")
-	head = /obj/item/clothing/head/hardhat
+	head = /obj/item/clothing/head/helmet/construction
 	uniform = /obj/item/clothing/under/rank/engineer
 	id_type = /obj/item/weapon/card/id/engineering/engineer
 	pda_type = /obj/item/device/pda/engineering

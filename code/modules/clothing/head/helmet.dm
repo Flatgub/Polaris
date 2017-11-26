@@ -146,7 +146,7 @@
 /obj/item/clothing/head/helmet/supply //Hardhats are asssumed to have flashlights, so this has to go here
 	name = "supply technicinan's hardhat"
 	desc = "A bright yellow hardhat worn by supply technicians to protect against falling boxes and crates"
-	icon_state = "construction_helmet"
+	icon_state = "supply_hardhat"
 	armor = list(melee = 30, bullet = 5, laser = 20,energy = 10, bomb = 20, bio = 10, rad = 10)
 	flags_inv = HIDEEARS
 

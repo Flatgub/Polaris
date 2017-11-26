@@ -16,6 +16,8 @@
 	uniform = /obj/item/clothing/under/rank/cargotech
 	id_type = /obj/item/weapon/card/id/cargo/cargo_tech
 	pda_type = /obj/item/device/pda/cargo
+	head = /obj/item/clothing/head/helmet/supply
+	shoes = /obj/item/clothing/shoes/boots/black_workboots
 
 /decl/hierarchy/outfit/job/cargo/mining
 	name = OUTFIT_JOB_NAME("Shaft miner")
