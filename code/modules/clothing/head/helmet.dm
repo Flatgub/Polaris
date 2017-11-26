@@ -1,3 +1,4 @@
+//SECURITY HELMETS
 /obj/item/clothing/head/helmet
 	name = "helmet"
 	desc = "Standard Security gear. Protects the head from impacts."
@@ -109,24 +110,6 @@
 	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.5
 
-/obj/item/clothing/head/helmet/thunderdome
-	name = "\improper Thunderdome helmet"
-	desc = "<i>'Let the battle commence!'</i>"
-	icon_state = "thunderdome"
-	armor = list(melee = 80, bullet = 60, laser = 50,energy = 10, bomb = 25, bio = 10, rad = 0)
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
-	siemens_coefficient = 1
-
-/obj/item/clothing/head/helmet/gladiator
-	name = "gladiator helmet"
-	desc = "Ave, Imperator, morituri te salutant."
-	icon_state = "gladiator"
-	item_state_slots = list(slot_r_hand_str = "vhelmet", slot_l_hand_str = "vhelmet")
-	flags = BLOCKHAIR
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES
-	siemens_coefficient = 1
-
 /obj/item/clothing/head/helmet/tactical
 	name = "tactical helmet"
 	desc = "An armored helmet capable of being fitted with a multitude of attachments."
@@ -152,7 +135,48 @@
 	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.5
 
-//Non-hardsuit ERT helmets.
+//STAFF HELMETS
+/obj/item/clothing/head/helmet/construction
+	name = "construction technicinan's helmet"
+	desc = "A thick helmet worn by construction technicians to protect from danger and debris."
+	icon_state = "construction_helmet"
+	armor = list(melee = 30, bullet = 5, laser = 20,energy = 10, bomb = 20, bio = 10, rad = 20)
+	flags_inv = HIDEEARS
+
+/obj/item/clothing/head/helmet/supply //Hardhats are asssumed to have flashlights, so this has to go here
+	name = "supply technicinan's hardhat"
+	desc = "A bright yellow hardhat worn by supply technicians to protect against falling boxes and crates"
+	icon_state = "construction_helmet"
+	armor = list(melee = 30, bullet = 5, laser = 20,energy = 10, bomb = 20, bio = 10, rad = 10)
+	flags_inv = HIDEEARS
+
+
+//MISC HELMETS
+/obj/item/clothing/head/helmet/thunderdome
+	name = "\improper Thunderdome helmet"
+	desc = "<i>'Let the battle commence!'</i>"
+	icon_state = "thunderdome"
+	armor = list(melee = 80, bullet = 60, laser = 50,energy = 10, bomb = 25, bio = 10, rad = 0)
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 1
+
+/obj/item/clothing/head/helmet/gladiator
+	name = "gladiator helmet"
+	desc = "Ave, Imperator, morituri te salutant."
+	icon_state = "gladiator"
+	item_state_slots = list(slot_r_hand_str = "vhelmet", slot_l_hand_str = "vhelmet")
+	flags = BLOCKHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES
+	siemens_coefficient = 1
+
+/obj/item/clothing/head/helmet/blueshift //Legacy blueshift helmet
+	name = "blueshift officer helmet"
+	desc = "Standard blueshift security helmet"
+	icon_state = "blueshift_helmet"
+
+
+//NON-HARDSUIT ERT HELMETS
 /obj/item/clothing/head/helmet/ert
 	name = "emergency response team helmet"
 	desc = "An in-atmosphere helmet worn by members of the NanoTrasen Emergency Response Team. Protects the head from impacts."
