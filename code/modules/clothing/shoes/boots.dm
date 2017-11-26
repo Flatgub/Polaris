@@ -32,6 +32,13 @@
 	armor = list(melee = 40, bullet = 0, laser = 0, energy = 15, bomb = 20, bio = 0, rad = 20)
 	siemens_coefficient = 0.7
 
+/obj/item/clothing/shoes/boots/black_workboots
+	name = "black workboots"
+	desc = "A pair of black steel-toed work boots designed for use in industrial settings. Safety first."
+	icon_state = "jackboots"
+	armor = list(melee = 40, bullet = 0, laser = 0, energy = 15, bomb = 20, bio = 0, rad = 20)
+	siemens_coefficient = 0.7
+
 /obj/item/clothing/shoes/boots/workboots/toeless
 	name = "toe-less workboots"
 	desc = "A pair of toeless work boots designed for use in industrial settings. Modified for species whose toes have claws."
