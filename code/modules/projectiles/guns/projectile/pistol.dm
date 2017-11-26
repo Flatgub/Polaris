@@ -312,3 +312,60 @@
 
 /obj/item/weapon/gun/projectile/luger/brown
 	icon_state = "p08b"
+
+/obj/item/weapon/gun/projectile/glock
+	name = "glock 17"
+	desc = "The standard issue Glock 17 used by the security force. Uses 9mm rounds. Can be silenced"
+	icon_state = "glock"
+	item_state = null
+	w_class = ITEMSIZE_SMALL
+	caliber = "9mm"
+	silenced = 0
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ILLEGAL = 2)
+	fire_sound = 'sound/weapons/gunshot_glock.ogg'
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/mglock9mm
+	allowed_magazines = list(/obj/item/ammo_magazine/mglock9mm)
+
+/obj/item/weapon/gun/projectile/glock/update_icon()
+	..()
+	if(silenced)
+		if(ammo_magazine)
+			icon_state = "glock-supressor"
+		else
+			icon_state = "glock-supressor-e"
+	else
+		if(ammo_magazine)
+			icon_state = "glock"
+		else
+			icon_state = "glock-e"
+
+/obj/item/weapon/gun/projectile/glock/attack_hand(mob/living/user as mob)
+	if(user.get_inactive_hand() == src)
+		if(silenced)
+			if(!user.item_is_in_hands(src))
+				..()
+				return
+			user << "<span class='notice'>You unscrew [silenced] from [src].</span>"
+			user.put_in_hands(silenced)
+			silenced = 0
+			fire_sound = 'sound/weapons/gunshot_glock.ogg'
+			w_class = ITEMSIZE_SMALL
+			update_icon()
+			return
+	..()
+
+/obj/item/weapon/gun/projectile/glock/attackby(obj/item/I as obj, mob/living/user as mob)
+	if(istype(I, /obj/item/weapon/silencer))
+		if(!user.item_is_in_hands(src))	//if we're not in his hands
+			user << "<span class='notice'>You'll need [src] in your hands to do that.</span>"
+			return
+		user.drop_item()
+		user << "<span class='notice'>You screw [I] onto [src].</span>"
+		silenced = I	//dodgy?
+		fire_sound = 'sound/weapons/Gunshot_silenced2.ogg'
+		w_class = ITEMSIZE_NORMAL
+		I.loc = src		//put the silencer into the gun
+		update_icon()
+		return
+	..()

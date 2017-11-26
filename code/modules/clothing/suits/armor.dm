@@ -27,6 +27,12 @@
 	blood_overlay_type = "armor"
 	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
 
+/obj/item/clothing/suit/armor/security_vest
+	name = "security armour vest"
+	desc = "An thick protective vest that protects against some damage. It bears a security team badge."
+	icon_state = "armoralt"
+	item_state_slots = list(slot_r_hand_str = "armor", slot_l_hand_str = "armor")
+
 /obj/item/clothing/suit/armor/vest/alt
 	name = "security armor"
 	desc = "An armored vest that protects against some damage. This one has a NanoTrasen corporate badge."

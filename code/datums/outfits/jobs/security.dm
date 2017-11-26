@@ -2,7 +2,7 @@
 	hierarchy_type = /decl/hierarchy/outfit/job/security
 	glasses = /obj/item/clothing/glasses/sunglasses/sechud
 	l_ear = /obj/item/device/radio/headset/headset_sec
-	gloves = /obj/item/clothing/gloves/black
+	//gloves = /obj/item/clothing/gloves/black   no gloves by default
 	shoes = /obj/item/clothing/shoes/boots/jackboots
 	backpack = /obj/item/weapon/storage/backpack/security
 	satchel_one = /obj/item/weapon/storage/backpack/satchel/sec
@@ -42,9 +42,11 @@
 	head = null
 	suit = /obj/item/clothing/suit/storage/forensics/blue
 
+
+//Go get your armour and baton from locker, and your gun from the arms master
 /decl/hierarchy/outfit/job/security/officer
 	name = OUTFIT_JOB_NAME("Security Officer")
 	uniform = /obj/item/clothing/under/rank/security
-	l_pocket = /obj/item/device/flash
+	l_pocket = /obj/item/device/flash //Replace this with pepper spray
 	id_type = /obj/item/weapon/card/id/security/officer
 	pda_type = /obj/item/device/pda/security

@@ -18,13 +18,14 @@
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/rank/security
-	name = "security officer's jumpsuit"
-	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for robust protection."
+	name = "security officer's uniform"
+	desc = "The standard uniform for security staff, as defined by the facility uniform policy. The fabric is a bit stronger than normal."
 	icon_state = "security"
-	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
+	item_state_slots = list(slot_r_hand_str = "ba_suit", slot_l_hand_str = "ba_suit") //Substitute this later with proper inhands
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
-	rolled_sleeves = 0
+	rolled_sleeves = -1
+	rolled_down = -1
 
 /obj/item/clothing/under/rank/dispatch
 	name = "dispatcher's uniform"

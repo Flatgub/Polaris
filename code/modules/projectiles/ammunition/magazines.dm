@@ -286,6 +286,17 @@
 /obj/item/ammo_magazine/box/c9mm/empty
 	initial_ammo = 0
 
+/obj/item/ammo_magazine/mglock9mm
+	name = "glock magazine (9mm)"
+	icon_state = "9mmglock"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	matter = list(DEFAULT_WALL_MATERIAL = 480)
+	caliber = "9mm"
+	ammo_type = /obj/item/ammo_casing/a9mm
+	max_ammo = 17
+	multiple_sprites = 1
+
 ///////// 10mm /////////
 
 /obj/item/ammo_magazine/m10mm

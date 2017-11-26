@@ -37,11 +37,12 @@
 	rolled_sleeves = -1
 
 /obj/item/clothing/under/rank/cargotech
-	name = "cargo technician's jumpsuit"
-	desc = "Shooooorts! They're comfy and easy to wear!"
+	name = "supply technician's jumpsuit"
+	desc = "An olive jumpsuit worn by supply technicians."
 	icon_state = "cargo"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
-	rolled_sleeves = 0
+	item_state_slots = list(slot_r_hand_str = "green", slot_l_hand_str = "green") //Substitute this later with proper inhands
+	rolled_sleeves = -1
+	rolled_down = -1
 
 /obj/item/clothing/under/rank/cargotech/jeans
 	name = "cargo technician's jumpjeans"
